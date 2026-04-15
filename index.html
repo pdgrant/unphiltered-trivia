@@ -309,6 +309,173 @@
     margin-top: 1rem;
   }
 
+  /* FEATURED EVENT */
+  #featured-event {
+    border-top: 1px solid var(--dark-subtle);
+  }
+
+  .featured-event-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-subtle);
+    border-top: 3px solid var(--orange);
+    padding: 3rem 2.5rem;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .featured-event-card::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(232, 132, 92, 0.12), transparent 70%);
+    pointer-events: none;
+  }
+
+  .featured-presents {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    color: var(--cream);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+
+  .featured-title .accent {
+    color: var(--orange);
+    margin-left: 0.25rem;
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+
+  .featured-date {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--orange);
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .featured-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--cream-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-meta {
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-meta-row {
+    color: var(--cream);
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .featured-meta-row .label {
+    color: var(--cream-dim);
+    font-weight: 300;
+    margin-right: 0.5rem;
+  }
+
+  .featured-free {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--black);
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-prizes-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .featured-prizes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem 0;
+  }
+
+  .featured-prizes li {
+    color: var(--cream);
+    font-weight: 400;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--dark-subtle);
+    display: flex;
+    align-items: center;
+  }
+
+  .featured-prizes li:last-child {
+    border-bottom: none;
+  }
+
+  .featured-prizes li::before {
+    content: '✦';
+    color: var(--orange);
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .featured-cta {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--black);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 0.75rem 1.75rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .featured-cta:hover {
+    background: var(--orange-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232, 132, 92, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .featured-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .featured-event-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+
   /* ABOUT */
   #about {
     border-top: 1px solid var(--dark-subtle);
@@ -654,6 +821,41 @@
   <p class="tagline">Athens, Georgia's favorite trivia night.</p>
   <a href="#schedule" class="hero-cta">See the Schedule</a>
   <div class="scroll-indicator">Scroll</div>
+</section>
+
+<!-- FEATURED EVENT -->
+<section id="featured-event">
+  <div class="section-label">Special Event · This Saturday</div>
+  <h2 class="section-title">Don't Miss</h2>
+  <div class="section-divider"></div>
+  <div class="featured-event-card">
+    <div class="featured-presents">UnPhiltered Presents</div>
+    <h3 class="featured-title">Twilight Trivia Ride<span class="accent">»»</span></h3>
+    <div class="featured-grid">
+      <div>
+        <div class="featured-date">Sat · Apr 18</div>
+        <div class="featured-year">2026</div>
+        <div class="featured-meta">
+          <div class="featured-meta-row"><span class="label">Time</span>4:00 – 6:00 PM</div>
+          <div class="featured-meta-row"><span class="label">Where</span>Hendershot's Coffee Bar</div>
+        </div>
+        <div class="featured-free">Free Admission</div>
+        <div>
+          <a href="https://maps.google.com/?q=Hendershot%27s+Coffee+Bar+Athens+GA" target="_blank" rel="noopener" class="featured-cta">Get Directions</a>
+        </div>
+      </div>
+      <div>
+        <div class="featured-prizes-label">Prizes</div>
+        <ul class="featured-prizes">
+          <li>House Cash</li>
+          <li>Drinks</li>
+          <li>Coffee</li>
+          <li>Merch</li>
+          <li>And More</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SCHEDULE -->
